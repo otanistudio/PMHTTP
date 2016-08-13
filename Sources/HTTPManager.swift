@@ -1052,7 +1052,7 @@ extension HTTPManager {
             #if os(OSX)
                 return ("Macintosh", "Mac OS X")
             #elseif os(iOS) || os(tvOS)
-                let device = UIDevice.currentDevice()
+                let device = UIDevice.current
                 return (device.model, device.systemName)
             #elseif os(watchOS)
                 let device = WKInterfaceDevice.currentDevice()
