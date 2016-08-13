@@ -253,7 +253,7 @@ public final class HTTPManager: NSObject {
                 } else {
                     // This is an application. We still can't invoke UIApplication.sharedApplication directly,
                     // but we can use `valueForKey(_:)` to get it, and application extensions can still reference the type.
-                    setup = (UIApplication.valueForKey("sharedApplication") as? UIApplication)?.delegate as? HTTPManagerConfigurable
+                    setup = (UIApplication.value(forKey: "sharedApplication") as? UIApplication)?.delegate as? HTTPManagerConfigurable
                 }
             #endif
             setup?.configure(httpManager: self)
