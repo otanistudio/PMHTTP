@@ -247,7 +247,7 @@ public final class HTTPManager: NSObject {
                 // We have to detect if we're in an app extension, because we can't access UIApplication.sharedApplication().
                 // In that event, we can't configure ourselves and the extension must do it for us.
                 // We'll check for the presence of the NSExtension key in the Info.plist.
-                if NSBundle.mainBundle().infoDictionary?["NSExtension"] != nil {
+                if Bundle.main.infoDictionary?["NSExtension"] != nil {
                     // This appears to be an application extension. No configuration allowed.
                     setup = nil
                 } else {
